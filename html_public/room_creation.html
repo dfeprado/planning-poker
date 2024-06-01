@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planning Poker - Room Creation</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"> 
+</head>
+<body>
+    <div>
+        <form>
+            <fieldset>
+                <legend>Create a room</legend>
+
+                <div>
+                    <label>Title</label>
+                    <input name="roomTitle" type="text" autofocus required />
+                </div>
+
+                <div>
+                    <label>Allowed cards</label>
+                    <small>(click to select/deselect)</small>
+                    <div class="card-housing"></div>
+                    <label>Persist my cards preference: </label>
+                    <input name="persistCardsPreference" type="checkbox" checked="true" />
+                </div>
+
+                <button type="submit">Create</button>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
+
+<script src="/room_creation.js"></script>
