@@ -9,26 +9,26 @@
     rel="stylesheet"> 
 </head>
 <body>
-    <div>
-        <form>
-            <fieldset>
-                <legend>Create a room</legend>
+    <div class="form-housing">
+        <form class="form">
+            <h1>Create a new room</h1>
+            <div class="input-field">
+                <label>Title</label>
+                <input name="roomTitle" type="text" autofocus required />
+            </div>
 
-                <div>
-                    <label>Title</label>
-                    <input name="roomTitle" type="text" autofocus required />
-                </div>
+            <div class="input-field">
+                <label>Allowed cards</label>
+                <small>(click to select/deselect)</small>
+                <div class="card-housing"></div>
+            </div>
+            
+            <div class="input-field">                
+                <label>Persist my cards preference: </label>
+                <input name="persistCardsPreference" type="checkbox" checked="true" />
+            </div>
 
-                <div>
-                    <label>Allowed cards</label>
-                    <small>(click to select/deselect)</small>
-                    <div class="card-housing"></div>
-                    <label>Persist my cards preference: </label>
-                    <input name="persistCardsPreference" type="checkbox" checked="true" />
-                </div>
-
-                <button type="submit">Create</button>
-            </fieldset>
+            <button type="submit">Create</button>
         </form>
     </div>
 </body>
