@@ -10,25 +10,25 @@
 </head>
 <body>
     <div class="form-housing">
-        <form class="form">
-            <h1>Create a new room</h1>
-            <div class="input-field">
+        <form class="form landscape-form">
+            <h1 class="span-cols">Create a new room</h1>
+            <div class="input-field first-col">
                 <label>Title</label>
                 <input name="roomTitle" type="text" autofocus required />
             </div>
 
-            <div class="input-field">
+            <div class="input-field available-cards-grid">
                 <label>Allowed cards</label>
                 <small>(click to select/deselect)</small>
                 <div class="card-housing"></div>
             </div>
             
-            <div class="input-field">                
+            <div class="input-field first-col">                
                 <label>Persist my cards preference: </label>
                 <input name="persistCardsPreference" type="checkbox" checked="true" />
             </div>
 
-            <button type="submit">Create</button>
+            <button class="span-cols" type="submit">Create</button>
         </form>
     </div>
 </body>

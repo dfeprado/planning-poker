@@ -19,8 +19,10 @@ function makeCard(content, selectedCards) {
     if (selectedCards.has(content)) {
       selectedCards.delete(content);
       cardElement.classList.remove("card-selected");
+      cardElement.classList.add("card-unselected");
     } else {
       selectedCards.add(content);
+      cardElement.classList.remove("card-unselected");
       cardElement.classList.add("card-selected");
     }
   });

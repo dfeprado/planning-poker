@@ -34,6 +34,33 @@ form.form button {
     padding: 1rem 0;
     border-radius: .5rem;
     font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.card-housing {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: auto auto auto auto;
+}
+
+.card {
+    border-width: 1px;
+    border-color: rgb(165, 165, 165);
+    border-style: solid;
+    border-radius: .5rem;
+    padding: 2rem 0;
+    font-size: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: transform .2s;
+    filter: blur(2px) opacity(40%);
+    background-color: rgb(255, 255, 255);
+}
+
+.card-selected {
+    border-width: 2px;
+    border-color: rgb(103, 192, 103);
+    filter: brightness(1);
 }
 
 @media screen and (min-width: 960px) {
@@ -45,21 +72,37 @@ form.form button {
     }
 }
 
-.card-housing {
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: auto auto auto auto;
-}
+@media (orientation: landscape) and (max-width: 800px) {
+    .landscape-form {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: 35% auto;
+        grid-template-rows: auto auto auto auto;
+    }
 
-.card {
-    border: 1px solid rgb(165, 165, 165);
-    border-radius: .5rem;
-    padding: 2rem 0;
-    font-size: 1.5rem;
-    text-align: center;
-    cursor: pointer;
-}
+    h1 {
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+        grid-column-start: 1;
+        grid-column-end: span 2;
+    }
 
-.card-selected {
-    border: 2px solid rgb(103, 192, 103);
+    .landscape-form .first-col {
+        grid-column-start: 1;
+    }
+
+    .landscape-form .span-cols {
+        grid-column-start: 1;
+        grid-column-end: span 2;
+    }
+
+    .available-cards-grid {
+        grid-column-start: 2;
+        grid-row-start: 2;
+        grid-row-end: span 3;
+    }
+
+    .available-cards-grid .card {
+        padding: .4rem 0;
+    }
 }
